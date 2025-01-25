@@ -1,0 +1,6 @@
+com\first\api\repository\ProductoRepository.class
+com\first\api\model\Producto.class
+com\first\api\FirstApiRestApplication.class
+com\first\api\service\ProductoService.class
+com\first\api\controller\HelloController.class
+com\first\api\controller\ProductoController.class
