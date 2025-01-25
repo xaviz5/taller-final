@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    triggers {
-        // Este bloque es opcional si usas webhooks, pero puede ser útil en caso de polling
-        pollSCM('H/5 * * * *') // Verifica cambios cada 5 minutos (opcional)
-    }
-
     stages {
         stage('Checkout') {
             steps {
