@@ -4,24 +4,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                deleteDir() // Limpia el workspace antes de hacer checkout
-                checkout scm // Realiza el checkout del código
+                deleteDir()
+                checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                // Ejecuta el comando de construcción; ajusta según tu herramienta
-                sh 'mvn -f first-api-rest clean install' // Para un proyecto Maven
-                // bat 'mvn clean install' // Usar bat si estás en un entorno Windows
+                sh 'mvn -f first-api-rest clean install'
             }
         }
 
         stage('Test') {
             steps {
-                // Ejecuta el comando de pruebas; ajusta según tu herramienta
-                sh 'mvn -f first-api-rest test' // Para un proyecto Maven
-                // bat 'mvn test' // Usar bat si estás en un entorno Windows
+                sh 'mvn -f first-api-rest test'
             }
         }
     }
