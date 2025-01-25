@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Ejecuta el comando de construcción; ajusta según tu herramienta
-                sh 'mvn clean install' // Para un proyecto Maven
+                sh 'mvn -f clean install' // Para un proyecto Maven
                 // bat 'mvn clean install' // Usar bat si estás en un entorno Windows
             }
         }
