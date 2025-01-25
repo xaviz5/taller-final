@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Ejecuta el comando de pruebas; ajusta según tu herramienta
-                sh 'mvn test' // Para un proyecto Maven
+                sh 'mvn -f first-api-rest test' // Para un proyecto Maven
                 // bat 'mvn test' // Usar bat si estás en un entorno Windows
             }
         }
