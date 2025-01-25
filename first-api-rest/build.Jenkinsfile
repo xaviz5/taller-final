@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        gitPush(branches: 'master')
+        pollSCM(branches: 'master')
     }
 
     stages {
